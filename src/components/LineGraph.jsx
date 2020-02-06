@@ -32,6 +32,8 @@ const LineGraph = () => {
 
   const handleProcess = () => {
     const result = csvToJson(csv);
+    console.log(JSON.parse(result));
+
     setData(JSON.parse(result));
     const columns = Object.getOwnPropertyNames(JSON.parse(result)[0]);
     setColumns(columns);
